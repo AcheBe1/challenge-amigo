@@ -8,8 +8,18 @@ function agregarAmigo(){
     }
     listaAmigos.push(inputAmigo.value);
     ulListaAmigos.innerHTML += `<li>${inputAmigo.value}<li>`;
+    
+    limpiarCaja();
 
 };
+
+function limpiarCaja(){
+    let valorCaja = document.querySelector("#amigo");
+    valorCaja.value = " ";
+}
+
+
+
 function sortearAmigo(){
  const random = Math.floor(Math.random() * listaAmigos.length);
  const amigoSecreto = listaAmigos[random];
